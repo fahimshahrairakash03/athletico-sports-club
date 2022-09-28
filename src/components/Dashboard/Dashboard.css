@@ -1,0 +1,7 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.sports-list {
+  background: #f2f4fa;
+}
