@@ -13,7 +13,9 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <div className="sports-list">
-        <h1>Sports list</h1>
+        <h1>Athletico-Sports-Club</h1>
+        <br />
+        <h3>Select Today's Sport</h3>
         <div className="sports-name">
           {sports.map((sport) => (
             <Sport sport={sport}></Sport>
