@@ -1,0 +1,32 @@
+.personal-info {
+  display: flex;
+  justify-content: space-around;
+  background: #f2f4fa;
+  border-radius: 10px;
+}
+.break-time {
+  background-color: #f2f4fa;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.break-btn {
+  margin-left: 4px;
+  border: none;
+  padding: 10px;
+  border-radius: 40%;
+  background-color: white;
+}
+.break-btn:hover {
+  background-color: indigo;
+  color: white;
+}
+.sport-time {
+  background-color: #f2f4fa;
+  padding: 10px;
+}
+.activity {
+  padding: 10px;
+  background-color: darkcyan;
+  border: none;
+  border-radius: 10px;
+}

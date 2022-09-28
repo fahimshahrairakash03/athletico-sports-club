@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Activity from "../Activity/Activity";
 import Sport from "../Sport/Sport";
 import "./Dashboard.css";
 
@@ -23,7 +24,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="activity-log">
-        <h1>Activity Log</h1>
+        <Activity></Activity>
       </div>
     </div>
   );
