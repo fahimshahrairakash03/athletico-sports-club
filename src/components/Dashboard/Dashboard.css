@@ -5,3 +5,7 @@
 .sports-list {
   background: #f2f4fa;
 }
+.sports-name {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
