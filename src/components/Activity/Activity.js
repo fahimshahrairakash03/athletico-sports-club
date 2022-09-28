@@ -1,7 +1,12 @@
 import React from "react";
 import "./Activity.css";
 
-const Activity = () => {
+const Activity = (props) => {
+  const { times } = props;
+  let time = 0;
+  for (const sport of times) {
+    time = time + sport.time;
+  }
   return (
     <div>
       <div className="personal">
@@ -31,7 +36,7 @@ const Activity = () => {
         <button className="break-btn">50s</button>
       </div>
 
-      <h4 className="sport-time">Sports Details: </h4>
+      <h4 className="sport-time">Sports Time: {time} </h4>
       <h4 className="sport-time">Break Time: </h4>
       <button className="activity">Activity Completed</button>
     </div>

@@ -5,12 +5,20 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
   const [sports, setSports] = useState([]);
+  const [times, settimes] = useState([]);
 
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
       .then((data) => setSports(data));
   }, []);
+
+  const addtime = (product) => {
+    const newtimes = [...times, product];
+    settimes(newtimes);
+    // console.log(product);
+  };
+
   return (
     <div className="dashboard">
       <div className="sports-list">
@@ -19,12 +27,12 @@ const Dashboard = () => {
         <h3>Select Today's Sport</h3>
         <div className="sports-name">
           {sports.map((sport) => (
-            <Sport sport={sport}></Sport>
+            <Sport sport={sport} addtime={addtime}></Sport>
           ))}
         </div>
       </div>
       <div className="activity-log">
-        <Activity></Activity>
+        <Activity times={times}></Activity>
       </div>
     </div>
   );
