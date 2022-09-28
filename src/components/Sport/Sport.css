@@ -1,4 +1,9 @@
+.sport-card {
+  background-color: white;
+}
+
 .sport-img {
-  height: 100px;
-  width: 200px;
+  height: 150px;
+  width: 95%;
+  margin: 7px;
 }
