@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Activity.css";
 
 const Activity = (props) => {
@@ -7,6 +7,18 @@ const Activity = (props) => {
   for (const sport of times) {
     time = time + sport.time;
   }
+
+  const [breakTime, setbreak] = useState(0);
+
+  const addbreaktime = (breaktime) => {
+    const breakTime = breaktime;
+    console.log(typeof breakTime);
+    setbreak(breakTime);
+    // if (id === "a10s") {
+    //   breakSec = 10;
+    //   setbreak(breakSec);
+    // }
+  };
   return (
     <div>
       <div className="personal">
@@ -29,15 +41,27 @@ const Activity = (props) => {
       </div>
       <h3>Add a Break</h3>
       <div className="break-time">
-        <button className="break-btn">10s</button>
-        <button className="break-btn">20s</button>
-        <button className="break-btn">30s</button>
-        <button className="break-btn">40s</button>
-        <button className="break-btn">50s</button>
+        <button onClick={() => addbreaktime(10)} className="break-btn">
+          10
+        </button>
+        <button onClick={() => addbreaktime(20)} className="break-btn">
+          20s
+        </button>
+        <button onClick={() => addbreaktime(30)} className="break-btn">
+          30s
+        </button>
+        <button onClick={() => addbreaktime(40)} className="break-btn">
+          40s
+        </button>
+        <button onClick={() => addbreaktime(50)} className="break-btn">
+          50s
+        </button>
       </div>
 
       <h4 className="sport-time">Sports Time: {time} </h4>
-      <h4 className="sport-time">Break Time: </h4>
+      <h4 className="sport-time">
+        Break Time: {breakTime}s <span id="breaktime"></span>{" "}
+      </h4>
       <button className="activity">Activity Completed</button>
     </div>
   );

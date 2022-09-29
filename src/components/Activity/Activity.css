@@ -10,7 +10,7 @@
   border-radius: 10px;
 }
 .break-btn {
-  margin-left: 4px;
+  margin: 4px;
   border: none;
   padding: 10px;
   border-radius: 40%;
@@ -29,4 +29,12 @@
   background-color: darkcyan;
   border: none;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .personal-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
