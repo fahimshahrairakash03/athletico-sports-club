@@ -27,7 +27,7 @@ const Dashboard = () => {
         <h3>Select Today's Sport</h3>
         <div className="sports-name">
           {sports.map((sport) => (
-            <Sport sport={sport} addtime={addtime}></Sport>
+            <Sport key={sport.id} sport={sport} addtime={addtime}></Sport>
           ))}
         </div>
       </div>

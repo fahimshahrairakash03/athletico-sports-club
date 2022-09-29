@@ -14,10 +14,6 @@ const Activity = (props) => {
     const breakTime = breaktime;
     console.log(typeof breakTime);
     setbreak(breakTime);
-    // if (id === "a10s") {
-    //   breakSec = 10;
-    //   setbreak(breakSec);
-    // }
   };
   return (
     <div>
@@ -42,7 +38,7 @@ const Activity = (props) => {
       <h3>Add a Break</h3>
       <div className="break-time">
         <button onClick={() => addbreaktime(10)} className="break-btn">
-          10
+          10s
         </button>
         <button onClick={() => addbreaktime(20)} className="break-btn">
           20s
@@ -58,7 +54,7 @@ const Activity = (props) => {
         </button>
       </div>
 
-      <h4 className="sport-time">Sports Time: {time} </h4>
+      <h4 className="sport-time">Sports Time: {time} min </h4>
       <h4 className="sport-time">
         Break Time: {breakTime}s <span id="breaktime"></span>{" "}
       </h4>
