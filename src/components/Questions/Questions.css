@@ -1,0 +1,15 @@
+.questions-field {
+  padding: 50px;
+}
+.question {
+  border: 2px solid indigo;
+  padding: 20px 70px;
+  background-color: rgb(215, 235, 241);
+  margin: 20px;
+}
+.table,
+th,
+td {
+  border: 1px solid indigo;
+  border-collapse: collapse;
+}
