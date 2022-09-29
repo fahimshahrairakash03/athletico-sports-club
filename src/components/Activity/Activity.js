@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { addtodb, getbreaktime, getStoredTime } from "../../utilities/fakedb";
 import "./Activity.css";
 
 const Activity = (props) => {
@@ -12,9 +13,22 @@ const Activity = (props) => {
 
   const addbreaktime = (breaktime) => {
     const breakTime = breaktime;
-    console.log(typeof breakTime);
+    // console.log(typeof breakTime);
     setbreak(breakTime);
+    addtodb(breaktime);
   };
+
+  useEffect(() => {
+    const storedtime = getStoredTime();
+    let newtime;
+    console.log(storedtime);
+    for (const id in storedtime) {
+      newtime = storedtime[id];
+      console.log(newtime);
+    }
+    setbreak(newtime);
+  }, []);
+
   return (
     <div>
       <div className="personal">
