@@ -29,6 +29,12 @@
   background-color: darkcyan;
   border: none;
   border-radius: 10px;
+  color: white;
+  font-weight: 500;
+}
+.activity:hover {
+  background-color: rgb(38, 146, 146);
+  font-weight: 700;
 }
 
 @media screen and (max-width: 900px) {

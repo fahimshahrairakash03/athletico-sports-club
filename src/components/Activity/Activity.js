@@ -32,7 +32,9 @@ const Activity = (props) => {
   }, []);
 
   const differentToast = () => {
-    toast("Wow so easy!");
+    toast.success("Thanks for completing the Activity", {
+      position: "top-center",
+    });
   };
 
   return (
