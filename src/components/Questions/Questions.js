@@ -18,7 +18,7 @@ const Questions = () => {
           strings, similarly to JavaScript.
         </p>
       </div>
-      <div className="question">
+      <div id="table" className="question">
         <h3>Props vs State</h3>
         <table>
           <tr>

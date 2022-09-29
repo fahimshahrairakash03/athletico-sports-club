@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { addtodb, getbreaktime, getStoredTime } from "../../utilities/fakedb";
 import "./Activity.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Activity = (props) => {
   const { times } = props;
@@ -28,6 +30,10 @@ const Activity = (props) => {
     }
     setbreak(newtime);
   }, []);
+
+  const differentToast = () => {
+    toast("Wow so easy!");
+  };
 
   return (
     <div>
@@ -72,7 +78,10 @@ const Activity = (props) => {
       <h4 className="sport-time">
         Break Time: {breakTime}s <span id="breaktime"></span>{" "}
       </h4>
-      <button className="activity">Activity Completed</button>
+      <button className="activity" onClick={differentToast}>
+        Activity Completed
+      </button>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
